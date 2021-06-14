@@ -1,0 +1,28 @@
+Button{
+    -fx-background-color: #165DAF;
+    -fx-text-fill: white;
+}
+Button:hover { 
+    -fx-background-color: #0078D7;
+    -fx-text-fill: white;
+    
+}
+Button:pressed {
+    -fx-background-color: #165D8E;
+}
+#mainLabel{
+    -fx-background-color: #FFFFFE;
+}
+#smallLabel{
+    -fx-background-color: #CCCCCC;
+}
+#history_label{
+    -fx-background-color: #165DAF;
+    -fx-text-fill: white;
+}
+#label_1, #label_3, #label_5, #label_7, #label_9{
+    -fx-background-color: #EEEEEE;
+}
+#label_2, #label_4, #label_6, #label_8, #label_10{
+    -fx-background-color: #CCCCFF;
+}

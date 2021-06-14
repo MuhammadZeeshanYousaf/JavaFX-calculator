@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import java.util.ArrayList?>
+<!--<?import java.util.ArrayList?>-->
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="680.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zeefxcalculator.CalculatorController">
+    <stylesheets>
+        <URL value="@CalculatorStyle.css" />
+    </stylesheets>
+   <children>
+      <StackPane layoutX="-1.0" layoutY="-1.0" prefHeight="600.0" prefWidth="680.0">
+         <children>
+            <SplitPane dividerPositions="0.5059880239520959" prefHeight="160.0" prefWidth="200.0">
+              <items>
+                <AnchorPane prefWidth="370.0">
+                     <children>
+                        <VBox prefHeight="598.0" prefWidth="369.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="mainLabel" alignment="CENTER_RIGHT" prefHeight="95.0" prefWidth="372.0" text="0">
+                                       <font>
+                                          <Font name="Century Gothic" size="36.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="14.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="30.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="smallLabel" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="369.0" text="Operation">
+                                       <padding>
+                                          <Insets right="14.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#processResetBtn" prefHeight="90.0" prefWidth="90.0" text="C">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processBackspace" prefHeight="90.0" prefWidth="90.0" text="&lt;&lt;">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processPercentage" prefHeight="90.0" prefWidth="90.0" text="\%">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processOperators" prefHeight="90.0" prefWidth="90.0" text="/">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#processNumbers" prefHeight="90.0" prefWidth="90.0" text="7">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processNumbers" prefHeight="90.0" prefWidth="90.0" text="8">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processNumbers" prefHeight="90.0" prefWidth="90.0" text="9">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processOperators" prefHeight="90.0" prefWidth="90.0" text="X">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#processNumbers" prefHeight="90.0" prefWidth="90.0" text="4">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processNumbers" prefHeight="90.0" prefWidth="90.0" text="5">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processNumbers" prefHeight="90.0" prefWidth="90.0" text="6">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processOperators" prefHeight="90.0" prefWidth="90.0" text="-">
+                                       <font>
+                                          <Font name="Century Gothic" size="36.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#processNumbers" prefHeight="90.0" prefWidth="90.0" text="1">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processNumbers" prefHeight="90.0" prefWidth="90.0" text="2">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processNumbers" prefHeight="90.0" prefWidth="90.0" text="3">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processOperators" prefHeight="90.0" prefWidth="90.0" text="+">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#processNumbers" prefHeight="90.0" prefWidth="180.0" text="0">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processNumbers" prefHeight="90.0" prefWidth="90.0" text=".">
+                                       <font>
+                                          <Font name="Century Gothic" size="36.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#processOperators" prefHeight="90.0" prefWidth="90.0" text="=">
+                                       <font>
+                                          <Font name="Century Gothic" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane prefWidth="310.0">
+                     <children>
+                        <VBox layoutX="-1.0" prefHeight="598.0" prefWidth="305.0">
+                           <children>
+                              <Label fx:id="history_label" alignment="CENTER" prefHeight="50.0" prefWidth="305.0" text="History">
+                                 <font>
+                                    <Font name="Bookman Old Style" size="32.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_1" alignment="CENTER" prefHeight="55.0" prefWidth="305.0" text="   ">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_2" alignment="CENTER" prefHeight="55.0" prefWidth="305.0" text="   ">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_3" alignment="CENTER" prefHeight="55.0" prefWidth="305.0" text="   ">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_4" alignment="CENTER" prefHeight="55.0" prefWidth="305.0" text="   ">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_5" alignment="CENTER" prefHeight="55.0" prefWidth="305.0" text="   ">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_6" alignment="CENTER" prefHeight="55.0" prefWidth="305.0" text="   ">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_7" alignment="CENTER" prefHeight="55.0" prefWidth="305.0" text="   ">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_8" alignment="CENTER" prefHeight="55.0" prefWidth="305.0" text="   ">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_9" alignment="CENTER" prefHeight="55.0" prefWidth="305.0" text="   ">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_10" alignment="CENTER" prefHeight="55.0" prefWidth="305.0" text="   ">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                              
+                            <fx:define>   
+                            <ArrayList fx:id="history_labelList">
+                                <fx:reference source="label_1" />
+                                <fx:reference source="label_2" />
+                                <fx:reference source="label_3" />
+                                <fx:reference source="label_4" />
+                                <fx:reference source="label_5" />
+                                <fx:reference source="label_6" />
+                                <fx:reference source="label_7" />
+                                <fx:reference source="label_8" />
+                                <fx:reference source="label_9" />
+                                <fx:reference source="label_10" />
+                            </ArrayList>
+                            </fx:define>
+                              
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
